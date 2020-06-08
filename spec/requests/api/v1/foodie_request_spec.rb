@@ -1,10 +1,11 @@
 require 'rails_helper'
 
 describe "Background API" do
-  it "sends a url back" do
+  it "sends a foodie object back" do
     get '/api/v1/foodie?start=denver,co&end=pueblo,co&search=italian'
     expect(response).to be_successful
     foodie = JSON.parse(response.body)
+
     expect(foodie["data"]["attributes"]["end_location"]).to eq("pueblo,co")
     expect(foodie["data"]["attributes"]["travel_time"]).to eq("1 hour 48 mins")
     expect(foodie["data"]["attributes"]["forecast"]["summary"]).to eq("clear sky")

@@ -14,7 +14,7 @@
       <img src="./assets/0.12.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2020-06-08T11:23:27-06:00">2020-06-08T11:23:27-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2020-06-08T11:57:32-06:00">2020-06-08T11:57:32-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -348,7 +348,7 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#410ce14382116f1ad10ef3a13ef344eb086762ed" class="src_link" title="spec/requests/api/v1/foodie_request_spec.rb">spec/requests/api/v1/foodie_request_spec.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">15</td>
+            <td class="cell--number">16</td>
             <td class="cell--number">12</td>
             <td class="cell--number">12</td>
             <td class="cell--number">0</td>
@@ -6010,7 +6010,7 @@
 
             
 
-            <code class="ruby">  it &quot;sends a url back&quot; do</code>
+            <code class="ruby">  it &quot;sends a foodie object back&quot; do</code>
           </li>
         </div>
       
@@ -6048,13 +6048,13 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="8">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="8">
+            
             
 
             
 
-            <code class="ruby">    expect(foodie[&quot;data&quot;][&quot;attributes&quot;][&quot;end_location&quot;]).to eq(&quot;pueblo,co&quot;)</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -6065,7 +6065,7 @@
 
             
 
-            <code class="ruby">    expect(foodie[&quot;data&quot;][&quot;attributes&quot;][&quot;travel_time&quot;]).to eq(&quot;1 hour 48 mins&quot;)</code>
+            <code class="ruby">    expect(foodie[&quot;data&quot;][&quot;attributes&quot;][&quot;end_location&quot;]).to eq(&quot;pueblo,co&quot;)</code>
           </li>
         </div>
       
@@ -6076,7 +6076,7 @@
 
             
 
-            <code class="ruby">    expect(foodie[&quot;data&quot;][&quot;attributes&quot;][&quot;forecast&quot;][&quot;summary&quot;]).to eq(&quot;clear sky&quot;)</code>
+            <code class="ruby">    expect(foodie[&quot;data&quot;][&quot;attributes&quot;][&quot;travel_time&quot;]).to eq(&quot;1 hour 48 mins&quot;)</code>
           </li>
         </div>
       
@@ -6087,7 +6087,7 @@
 
             
 
-            <code class="ruby">    expect(foodie[&quot;data&quot;][&quot;attributes&quot;][&quot;forecast&quot;][&quot;temperature&quot;]).to be_a(Float)</code>
+            <code class="ruby">    expect(foodie[&quot;data&quot;][&quot;attributes&quot;][&quot;forecast&quot;][&quot;summary&quot;]).to eq(&quot;clear sky&quot;)</code>
           </li>
         </div>
       
@@ -6098,7 +6098,7 @@
 
             
 
-            <code class="ruby">    expect(foodie[&quot;data&quot;][&quot;attributes&quot;][&quot;restaurant&quot;][&quot;name&quot;]).to eq(&quot;Angelo&#39;s Pizza Parlor&quot;)</code>
+            <code class="ruby">    expect(foodie[&quot;data&quot;][&quot;attributes&quot;][&quot;forecast&quot;][&quot;temperature&quot;]).to be_a(Float)</code>
           </li>
         </div>
       
@@ -6109,12 +6109,23 @@
 
             
 
+            <code class="ruby">    expect(foodie[&quot;data&quot;][&quot;attributes&quot;][&quot;restaurant&quot;][&quot;name&quot;]).to eq(&quot;Angelo&#39;s Pizza Parlor&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="14">
+            <span class="hits">1</span>
+            
+
+            
+
             <code class="ruby">    expect(foodie[&quot;data&quot;][&quot;attributes&quot;][&quot;restaurant&quot;][&quot;address&quot;]).to eq(&quot;105 E Riverwalk, Pueblo 81003&quot;)</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="14">
+          <li class="never" data-hits="" data-linenumber="15">
             
             
 
@@ -6125,7 +6136,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="15">
+          <li class="never" data-hits="" data-linenumber="16">
             
             
 
