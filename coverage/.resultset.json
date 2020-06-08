@@ -1,0 +1,357 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/maxwellbaird/turing/module3/sweater_weather/config/environment.rb": {
+        "lines": [
+          null,
+          1,
+          null,
+          null,
+          1
+        ]
+      },
+      "/Users/maxwellbaird/turing/module3/sweater_weather/config/application.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/maxwellbaird/turing/module3/sweater_weather/config/boot.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1
+        ]
+      },
+      "/Users/maxwellbaird/turing/module3/sweater_weather/config/environments/test.rb": {
+        "lines": [
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          null,
+          null,
+          1,
+          null,
+          null,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/maxwellbaird/turing/module3/sweater_weather/config/initializers/application_controller_renderer.rb": {
+        "lines": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/maxwellbaird/turing/module3/sweater_weather/config/initializers/backtrace_silencers.rb": {
+        "lines": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/maxwellbaird/turing/module3/sweater_weather/config/initializers/cors.rb": {
+        "lines": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/maxwellbaird/turing/module3/sweater_weather/config/initializers/filter_parameter_logging.rb": {
+        "lines": [
+          null,
+          null,
+          null,
+          1
+        ]
+      },
+      "/Users/maxwellbaird/turing/module3/sweater_weather/config/initializers/inflections.rb": {
+        "lines": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/maxwellbaird/turing/module3/sweater_weather/config/initializers/mime_types.rb": {
+        "lines": [
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/maxwellbaird/turing/module3/sweater_weather/config/initializers/wrap_parameters.rb": {
+        "lines": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          2,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/maxwellbaird/turing/module3/sweater_weather/config/routes.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/maxwellbaird/turing/module3/sweater_weather/app/controllers/api/v1/weather_controller.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          4,
+          4,
+          4,
+          4,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/maxwellbaird/turing/module3/sweater_weather/app/controllers/application_controller.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/Users/maxwellbaird/turing/module3/sweater_weather/app/services/geocoding_service.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          4,
+          4,
+          4,
+          4,
+          4,
+          null,
+          null
+        ]
+      },
+      "/Users/maxwellbaird/turing/module3/sweater_weather/app/poro/weather.rb": {
+        "lines": [
+          null,
+          1,
+          1,
+          null,
+          1,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          null,
+          null,
+          1,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          null,
+          null,
+          1,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          null,
+          null,
+          1,
+          4,
+          4,
+          4,
+          32,
+          32,
+          32,
+          32,
+          32,
+          32,
+          32,
+          null,
+          4,
+          null,
+          null,
+          1,
+          4,
+          4,
+          4,
+          24,
+          24,
+          24,
+          24,
+          24,
+          24,
+          12,
+          null,
+          12,
+          null,
+          24,
+          24,
+          24,
+          null,
+          4,
+          null,
+          null
+        ]
+      },
+      "/Users/maxwellbaird/turing/module3/sweater_weather/app/services/weather_service.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          4,
+          4,
+          4,
+          4,
+          null,
+          null
+        ]
+      },
+      "/Users/maxwellbaird/turing/module3/sweater_weather/app/serializer/weather_serializer.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          null
+        ]
+      }
+    },
+    "timestamp": 1591580328
+  }
+}
