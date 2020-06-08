@@ -6,14 +6,13 @@ class ZomatoService
     response = conn(lat, lon).get("search")
     body = JSON.parse(response.body, symbolize_names: true)
     find_cuisine(body, search)
-    binding.pry
   end
 
   private
 
   def find_cuisine(body, search)
     body[:restaurants].find do |response|
-      response[:restaurant][:cuisines].include?(search)
+      response[:restaurant][:cuisines].include?(search.capitalize)
     end
   end
 

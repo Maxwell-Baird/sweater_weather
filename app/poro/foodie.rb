@@ -42,7 +42,8 @@ class Foodie
     zomato = ZomatoService.new
     response = zomato.get_restaurant(geocode_response,search)
     hash[:name] = response[:restaurant][:name]
-    hash[:address] = response[:restaurant][:location][:address]
+    address_hash = response[:restaurant][:location]
+    hash[:address] = "#{address_hash[:address]}"
     hash
   end
 end
