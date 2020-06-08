@@ -211,8 +211,111 @@
           1,
           1,
           1,
+          1,
           null,
           null,
+          null,
+          null
+        ]
+      },
+      "/Users/maxwellbaird/turing/module3/sweater_weather/spec/requests/api/v1/weather_request_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/maxwellbaird/turing/module3/sweater_weather/app/controllers/api/v1/background_controller.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/maxwellbaird/turing/module3/sweater_weather/app/controllers/application_controller.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/Users/maxwellbaird/turing/module3/sweater_weather/app/services/photos_service.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
           null,
           null
         ]
@@ -228,12 +331,6 @@
           4,
           null,
           null,
-          null
-        ]
-      },
-      "/Users/maxwellbaird/turing/module3/sweater_weather/app/controllers/application_controller.rb": {
-        "lines": [
-          1,
           null
         ]
       },
@@ -352,6 +449,6 @@
         ]
       }
     },
-    "timestamp": 1591580328
+    "timestamp": 1591585840
   }
 }

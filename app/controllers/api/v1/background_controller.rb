@@ -1,10 +1,10 @@
 class Api::V1::BackgroundController < ApplicationController
 
   def show
-    geocode = GeocodingService.new
-    response = geocode.coordinates(params[:location])
-    weather = Weather.new(response)
-    render json: WeatherSerializer.new(weather)
+    response = PhotosService.new
+    url = Hash.new
+    url[:url] = response.photo_url(params[:location])
+    render json: url
   end
 
 end
