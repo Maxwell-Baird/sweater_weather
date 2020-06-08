@@ -30,7 +30,11 @@ class Weather
     hash[:icon] = response[:current][:weather][0][:icon]
     hash[:humidity] = (response[:current][:humidity] / 1609.344)
     hash[:uv] = response[:current][:uvi]
-    hash[:visibility] = response[:current][:visibility]
+    if response[:current][:visibility] == nil
+      hash[:visibility] = 10.0
+    else
+      hash[:visibility] = response[:current][:visibility] / 1609.344
+    end
     hash[:sun_rise] = Time.at(response[:current][:sunrise]).strftime("%I:%M %p")
     hash[:sun_set] = Time.at(response[:current][:sunset]).strftime("%I:%M %p")
     hash
