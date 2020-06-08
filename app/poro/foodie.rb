@@ -1,11 +1,14 @@
 class Foodie
 
-  def initialize(start_point,end_point)
+  attr_accessor :id, :travel_time, :end_location, :forecast, :restaurant
+
+  def initialize(start_point,end_point,search)
     @coordinates = get_coordinates(end_point)
     @travel_time = find_duration(start_point,end_point)
     @end_location = end_point
     @forecast = find_forecast(@coordinates)
-    @restaurant = find_restaurant(@coordinates)
+    @restaurant = find_restaurant(@coordinates,search)
+    @id = "null"
   end
 
   private
@@ -34,8 +37,12 @@ class Foodie
     hash
   end
 
-  def find_restaurant(geocode_response)
+  def find_restaurant(geocode_response, search)
+    hash = Hash.new
     zomato = ZomatoService.new
-    response = zomato.get_restaurant(geocode_response)
+    response = zomato.get_restaurant(geocode_response,search)
+    hash[:name] = response[:restaurant][:name]
+    hash[:address] = response[:restaurant][:location][:address]
+    hash
   end
 end
