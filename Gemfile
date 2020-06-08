@@ -19,6 +19,9 @@ gem 'rspec-rails'
 gem 'factory_bot_rails'
 gem 'figaro'
 gem 'simplecov'
+gem 'faraday'
+gem 'pry'
+
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
