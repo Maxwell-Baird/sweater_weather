@@ -33,4 +33,9 @@ class Foodie
     hash[:summary] = response[:current][:weather][0][:description]
     hash
   end
+
+  def find_restaurant(geocode_response)
+    zomato = ZomatoService.new
+    response = zomato.get_restaurant(geocode_response)
+  end
 end
