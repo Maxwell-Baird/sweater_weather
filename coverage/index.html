@@ -14,7 +14,7 @@
       <img src="./assets/0.12.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2020-06-08T09:38:01-06:00">2020-06-08T09:38:01-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2020-06-08T09:55:44-06:00">2020-06-08T09:55:44-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -43,8 +43,8 @@
   </div>
 
   <div class="t-line-summary">
-    <b>80</b> relevant lines,
-    <span class="green"><b>80</b> lines covered</span> and
+    <b>90</b> relevant lines,
+    <span class="green"><b>90</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed. </span>
     (<span class="green">
   100.0%
@@ -95,9 +95,9 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#5937f96dfff68cd1bb54063f9f5e20a1aa0aa1ad" class="src_link" title="app/poro/foodie.rb">app/poro/foodie.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">33</td>
-            <td class="cell--number">15</td>
-            <td class="cell--number">15</td>
+            <td class="cell--number">37</td>
+            <td class="cell--number">25</td>
+            <td class="cell--number">25</td>
             <td class="cell--number">0</td>
             <td class="cell--number">1.00</td>
             
@@ -460,8 +460,8 @@
     
 
     <div class="t-line-summary">
-      <b>15</b> relevant lines.
-      <span class="green"><b>15</b> lines covered</span> and
+      <b>25</b> relevant lines.
+      <span class="green"><b>25</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -512,7 +512,7 @@
 
             
 
-            <code class="ruby">    @travel_time = find_duration(start_point,end_point)</code>
+            <code class="ruby">    @coordinates = get_coordinates(end_point)</code>
           </li>
         </div>
       
@@ -523,7 +523,7 @@
 
             
 
-            <code class="ruby">    @end_location = end_point</code>
+            <code class="ruby">    @travel_time = find_duration(start_point,end_point)</code>
           </li>
         </div>
       
@@ -534,29 +534,29 @@
 
             
 
-            <code class="ruby">    @forecast = find_forecast(end_point)</code>
+            <code class="ruby">    @end_location = end_point</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="7">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="7">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">  end</code>
+            
+
+            <code class="ruby">    @forecast = find_forecast(@coordinates)</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="8">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="8">
+            <span class="hits">1</span>
             
 
-            <code class="ruby"></code>
+            
+
+            <code class="ruby">    binding.pry</code>
           </li>
         </div>
       
@@ -567,7 +567,7 @@
 
             
 
-            <code class="ruby">  private</code>
+            <code class="ruby">    @restaurant = find_restaurant(@coordinates)</code>
           </li>
         </div>
       
@@ -578,18 +578,18 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">  end</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="11">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="11">
+            
             
 
             
 
-            <code class="ruby">  def find_forecast(end_point)</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -600,18 +600,18 @@
 
             
 
-            <code class="ruby">    geocode = GeocodingService.new</code>
+            <code class="ruby">  private</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="13">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="13">
+            
             
 
             
 
-            <code class="ruby">    geocode_response = geocode.coordinates(end_point)</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -622,7 +622,7 @@
 
             
 
-            <code class="ruby">    weather_service = WeatherService.new</code>
+            <code class="ruby">  def get_coordinates(end_point)</code>
           </li>
         </div>
       
@@ -633,7 +633,7 @@
 
             
 
-            <code class="ruby">    response = weather_service.one_call(geocode_response)</code>
+            <code class="ruby">    geocode = GeocodingService.new</code>
           </li>
         </div>
       
@@ -644,7 +644,7 @@
 
             
 
-            <code class="ruby">    forecast_parse(response)</code>
+            <code class="ruby">    geocode_response = geocode.coordinates(end_point)</code>
           </li>
         </div>
       
@@ -677,7 +677,7 @@
 
             
 
-            <code class="ruby">  def find_duration(start_point,end_point)</code>
+            <code class="ruby">  def find_forecast(geocode_response)</code>
           </li>
         </div>
       
@@ -688,7 +688,7 @@
 
             
 
-            <code class="ruby">    response = DirectionsService.new</code>
+            <code class="ruby">    weather_service = WeatherService.new</code>
           </li>
         </div>
       
@@ -699,18 +699,18 @@
 
             
 
-            <code class="ruby">    response.directions(start_point,end_point)</code>
+            <code class="ruby">    response = weather_service.one_call(geocode_response)</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="22">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="22">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">  end</code>
+            
+
+            <code class="ruby">    forecast_parse(response)</code>
           </li>
         </div>
       
@@ -721,7 +721,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">  end</code>
           </li>
         </div>
       
@@ -732,40 +732,40 @@
 
             
 
-            <code class="ruby">  def forecast_parse(response)</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="25">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="25">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">    hash = Hash.new</code>
+            
+
+            <code class="ruby">  def find_duration(start_point,end_point)</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="26">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="26">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">    time_rounded_up = @travel_time[0].to_i + 2</code>
+            
+
+            <code class="ruby">    response = DirectionsService.new</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="27">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="27">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">    if time_rounded_up &lt; 48</code>
+            
+
+            <code class="ruby">    response.directions(start_point,end_point)</code>
           </li>
         </div>
       
@@ -776,7 +776,7 @@
 
             
 
-            <code class="ruby">      hash[:temperature] = response[:hourly][time_rounded_up][:temp]</code>
+            <code class="ruby">  end</code>
           </li>
         </div>
       
@@ -787,34 +787,78 @@
 
             
 
-            <code class="ruby">      hash[:summary] =</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="30">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="30">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">    else</code>
+            
+
+            <code class="ruby">  def forecast_parse(response)</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="31">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="31">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">    end</code>
+            
+
+            <code class="ruby">    hash = Hash.new</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="32">
+          <li class="covered" data-hits="1" data-linenumber="32">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    time_rounded_up = @travel_time[0].to_i + 2</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="33">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    hash[:temperature] = response[:current][:temp]</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="34">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    hash[:summary] = response[:current][:weather][0][:description]</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="35">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    hash</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="36">
             
             
 
@@ -825,7 +869,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="33">
+          <li class="never" data-hits="" data-linenumber="37">
             
             
 
