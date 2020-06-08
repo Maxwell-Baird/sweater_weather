@@ -1,16 +1,18 @@
 
 class Weather
+  attr_accessor :id, :current, :details, :hourly, :week
 
   def initialize(location)
     weather_service = WeatherService.new
     response = weather_service.one_call(location)
-    @current = current(response)
-    @details = details(response)
-    @hourly = hourly(response)
-    @week = week(response)
+    @current = current_hash(response)
+    @details = details_hash(response)
+    @hourly = hourly_hash(response)
+    @week = week_hash(response)
+    @id = 1
   end
 
-  def current(response)
+  def current_hash(response)
     hash = Hash.new
     hash[:weather] = response[:current][:weather][0][:main]
     hash[:tempature] = response[:current][:temp]
@@ -21,7 +23,7 @@ class Weather
     hash
   end
 
-  def details(response)
+  def details_hash(response)
     hash = Hash.new
     hash[:weather] = response[:current][:weather][0][:main]
     hash[:feels_like] = response[:current][:feels_like]
@@ -34,11 +36,12 @@ class Weather
     hash
   end
 
-  def hourly(response)
+  def hourly_hash(response)
     hourly = []
     count = 0
     8.times do
       hash = Hash.new
+      hash[:tempature] = response[:hourly][count][:temp]
       hash[:weather] = response[:hourly][count][:weather][0][:main]
       hash[:icon] = response[:hourly][count][:weather][0][:icon]
       hash[:hour] =Time.at(response[:hourly][count][:dt]).strftime("%I:%M %p")
@@ -48,7 +51,7 @@ class Weather
     hourly
   end
 
-  def week(response)
+  def week_hash(response)
     weekly = []
     count = 1
     6.times do
@@ -57,7 +60,11 @@ class Weather
       hash[:icon] = response[:daily][count][:weather][0][:icon]
       hash[:high] = response[:daily][count][:temp][:max]
       hash[:low] = response[:daily][count][:temp][:min]
-      hash[:precipitation] = response[:daily][count][:rain]
+      if response[:daily][count][:rain].nil?
+        hash[:precipitation] = 0.0
+      else
+        hash[:precipitation] = response[:daily][count][:rain]
+      end
       hash[:day] =Time.at(response[:daily][count][:dt]).strftime("%A")
       count += 1
       weekly << hash
