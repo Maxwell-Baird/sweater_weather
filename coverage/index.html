@@ -14,7 +14,7 @@
       <img src="./assets/0.12.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2020-06-08T10:58:19-06:00">2020-06-08T10:58:19-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2020-06-08T11:17:55-06:00">2020-06-08T11:17:55-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -43,8 +43,8 @@
   </div>
 
   <div class="t-line-summary">
-    <b>120</b> relevant lines,
-    <span class="green"><b>120</b> lines covered</span> and
+    <b>128</b> relevant lines,
+    <span class="green"><b>128</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed. </span>
     (<span class="green">
   100.0%
@@ -117,9 +117,9 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#2eb6757e66f261974d242a396aadb68cf64a19dd" class="src_link" title="app/services/directions_service.rb">app/services/directions_service.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
+            <td class="cell--number">17</td>
             <td class="cell--number">9</td>
-            <td class="cell--number">5</td>
-            <td class="cell--number">5</td>
+            <td class="cell--number">9</td>
             <td class="cell--number">0</td>
             <td class="cell--number">1.00</td>
             
@@ -128,9 +128,9 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#83aa8670fd65c7946245806003d2f7b1fbdfdd5a" class="src_link" title="app/services/geocoding_service.rb">app/services/geocoding_service.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">10</td>
-            <td class="cell--number">7</td>
-            <td class="cell--number">7</td>
+            <td class="cell--number">18</td>
+            <td class="cell--number">11</td>
+            <td class="cell--number">11</td>
             <td class="cell--number">0</td>
             <td class="cell--number">1.00</td>
             
@@ -1149,8 +1149,8 @@
     
 
     <div class="t-line-summary">
-      <b>5</b> relevant lines.
-      <span class="green"><b>5</b> lines covered</span> and
+      <b>9</b> relevant lines.
+      <span class="green"><b>9</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -1201,7 +1201,7 @@
 
             
 
-            <code class="ruby">    response = Faraday.get(&quot;https://maps.googleapis.com/maps/api/directions/json?origin=#{start_point}&amp;destination=#{end_point}&amp;key=#{ENV[&#39;GOOGLE_API&#39;]}&quot;)</code>
+            <code class="ruby">    response = conn.get(&quot;json?origin=#{start_point}&amp;destination=#{end_point}}&quot;)</code>
           </li>
         </div>
       
@@ -1250,7 +1250,95 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="9">
+          <li class="covered" data-hits="1" data-linenumber="9">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  private</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="10">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="11">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def conn</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="12">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    Faraday.new(url: &#39;https://maps.googleapis.com/maps/api/directions/&#39;) do |faraday|</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="13">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      faraday.params[&quot;key&quot;] = &quot;#{ENV[&#39;GOOGLE_API&#39;]}&quot;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="14">
+            
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="15">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="16">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="17">
             
             
 
@@ -1279,8 +1367,8 @@
     
 
     <div class="t-line-summary">
-      <b>7</b> relevant lines.
-      <span class="green"><b>7</b> lines covered</span> and
+      <b>11</b> relevant lines.
+      <span class="green"><b>11</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -1353,7 +1441,7 @@
 
             
 
-            <code class="ruby">    response = Faraday.get(&quot;https://maps.googleapis.com/maps/api/geocode/json?address=#{city},+#{state}&amp;key=#{ENV[&#39;GOOGLE_API&#39;]}&quot;)</code>
+            <code class="ruby">    response = conn.get(&quot;json?address=#{city},+#{state}&quot;)</code>
           </li>
         </div>
       
@@ -1392,6 +1480,94 @@
       
         <div>
           <li class="never" data-hits="" data-linenumber="10">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="11">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  private</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="12">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="13">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def conn</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="14">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    Faraday.new(url: &#39;https://maps.googleapis.com/maps/api/geocode/&#39;) do |faraday|</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="15">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      faraday.params[&quot;key&quot;] = &quot;#{ENV[&#39;GOOGLE_API&#39;]}&quot;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="16">
+            
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="17">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="18">
             
             
 
