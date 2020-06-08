@@ -1,8 +1,8 @@
 class GeocodingService
 
   def coordinates(location)
-    city = location.split(',')[0]
-    state = location.split(',')[1]
+    city = location.split(',')[0].downcase
+    state = location.split(',')[1].downcase
     response = conn.get("json?address=#{city},+#{state}")
     body = JSON.parse(response.body, symbolize_names: true)
     body[:results][0][:geometry][:location]
