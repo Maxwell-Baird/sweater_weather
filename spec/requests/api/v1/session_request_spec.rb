@@ -42,5 +42,14 @@ describe "Background API" do
     expect(user["error"]).to eq("One or more fields are blank")
   end
 
+  it "errors out if password is wrong" do
+    user_params = { email: "whatever@example.com",
+                    password: "password"}
+    post '/api/v1/sessions', params: user_params
+    user = JSON.parse(response.body)
+    expect(response.status).to eq(403)
+    expect(user["error"]).to eq("User does not exist")
+  end
+
 
 end
