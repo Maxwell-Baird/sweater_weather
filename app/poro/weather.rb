@@ -9,8 +9,10 @@ class Weather
     @details = details_hash(response)
     @hourly = hourly_hash(response)
     @week = week_hash(response)
-    @id = 1
+    @id = "null"
   end
+
+  private
 
   def current_hash(response)
     hash = Hash.new

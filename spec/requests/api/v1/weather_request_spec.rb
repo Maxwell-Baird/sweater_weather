@@ -7,7 +7,7 @@ describe "Weather API" do
     expect(response).to be_successful
 
     weather = JSON.parse(response.body)
-
+    
     expect(weather['data']["attributes"]['week'].count).to eq(6)
     expect(weather['data']["attributes"]['week'][0]['weather']).to be_a(String)
     expect(weather['data']["attributes"]['week'][0]['icon']).to be_a(String)
