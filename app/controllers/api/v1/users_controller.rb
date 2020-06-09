@@ -11,7 +11,6 @@ class Api::V1::UsersController < ApplicationController
         if user.save
           user.generate_api_key
           render json: UserSerializer.new(user), status: 201
-
         else
           render json: {error: "Email already in use"}, status: 403
         end
