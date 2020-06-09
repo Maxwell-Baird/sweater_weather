@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe "Background API" do
+describe "Foodie API" do
   it "sends a foodie object back" do
     get '/api/v1/foodie?start=denver,co&end=pueblo,co&search=italian'
     expect(response).to be_successful

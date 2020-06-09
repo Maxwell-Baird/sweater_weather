@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe "Background API" do
+describe "Sessions API" do
 
   it "signs in an user" do
     user1 = User.create(email: "whatever@example.com",

@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe "Background API" do
+describe "User API" do
   it "creates an user" do
     user1 = User.create(email: "test@example.com", password: "password")
 
