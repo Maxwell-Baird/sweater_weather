@@ -1,5 +1,5 @@
 class RoadTrip
-  
+
   attr_accessor :id, :travel_time, :destination, :forecast, :origin
 
 
@@ -32,8 +32,8 @@ class RoadTrip
 
   def forecast_parse(response)
     hash = Hash.new
-    time_rounded_up = @travel_time[0].to_i + 2
-    hash[:temperature] = response[:current][:temp]
+    hour = @travel_time[0].to_i + 2
+    hash[:temperature] = response[:hourly][hour][:temp]
     hash[:summary] = response[:current][:weather][0][:description]
     hash
   end
