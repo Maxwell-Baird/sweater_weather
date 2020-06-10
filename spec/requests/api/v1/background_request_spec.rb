@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe "Background API" do
-  it "sends a url back" do
+  it "sends a url back", :vcr do
     get '/api/v1/backgrounds?location=denver,co'
     expect(response).to be_successful
     photo = JSON.parse(response.body)

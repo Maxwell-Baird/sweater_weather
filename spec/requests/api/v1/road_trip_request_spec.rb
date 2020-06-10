@@ -1,24 +1,8 @@
 require 'rails_helper'
 
-describe "Background API" do
-  it "sends a url back" do
-    user1 = User.create(email: "whatever@example.com",
-                        password: "password",
-                        api_key: 'faked-api-key')
-    road_trip_params = {origin: "Denver,CO",
-                        destination: "Pueblo,CO",
-                        api_key: 'faked-api-key'}
-    post '/api/v1/road_trip', params: road_trip_params
-    expect(response).to be_successful
-    road_trip = JSON.parse(response.body)
-    expect(road_trip['data']['attributes']["origin"]).to eq("Denver,CO")
-    expect(road_trip['data']['attributes']["destination"]).to eq("Pueblo,CO")
-    expect(road_trip['data']['attributes']["travel_time"]).to eq("1 hour 48 mins")
-    expect(road_trip['data']['attributes']["forecast"]["temperature"]).to be_a(Float)
-    expect(road_trip['data']['attributes']["forecast"]["summary"]).to be_a(String)
-  end
+describe "Road Trip API" do
 
-  it "sends a url back" do
+  it "sends a road trip back", :vcr do
     user1 = User.create(email: "whatever@example.com",
                         password: "password",
                         api_key: 'faked-api-key')
@@ -28,12 +12,11 @@ describe "Background API" do
     post '/api/v1/road_trip', params: road_trip_params
     expect(response).to be_successful
     road_trip = JSON.parse(response.body)
-    
     expect(road_trip['data']['attributes']["origin"]).to eq("Houston,TX")
     expect(road_trip['data']['attributes']["destination"]).to eq("Seattle,WA")
     expect(road_trip['data']['attributes']["travel_time"]).to eq("1 day 11 hours")
-    expect(road_trip['data']['attributes']["forecast"]["temperature"]).to be_a(Float)
-    expect(road_trip['data']['attributes']["forecast"]["summary"]).to be_a(String)
+    expect(road_trip['data']['attributes']["forecast"]["temperature"]).to eq("55.6")
+    expect(road_trip['data']['attributes']["forecast"]["summary"]).to eq("overcast clouds")
   end
 
   it 'errors out if api key is wrong' do

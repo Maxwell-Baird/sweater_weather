@@ -33,7 +33,7 @@ class RoadTrip
   def forecast_parse(response)
     hash = Hash.new
     hour = @travel_time[0].to_i + 2
-    hash[:temperature] = response[:hourly][hour][:temp]
+    hash[:temperature] = response[:hourly][hour][:temp].to_s
     hash[:summary] = response[:current][:weather][0][:description]
     hash
   end
